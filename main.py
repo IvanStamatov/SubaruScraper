@@ -19,7 +19,7 @@ from email.message import EmailMessage
 #   - visit every link and get the page info we need
 #   - store that page info
 #   - after getting through all of the links, send an email with the stored info
-#   
+#   shfsdjhnbfsdfds
 #   
 #   
 #   
