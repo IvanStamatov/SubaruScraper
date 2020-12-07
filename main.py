@@ -18,9 +18,7 @@ from email.message import EmailMessage
 #   - get a link for every car listing
 #   - visit every link and get the page info we need
 #   - store that page info
-#   - after getting through all of the links, send an email with the stored info
-#   ghjhgjgh
-#   
+#   - after getting through all of the links, send an email with the stored info 
 #   
 #   
 #   
