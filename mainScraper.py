@@ -20,10 +20,23 @@ carBrand = input("Марка: ")
 carModel = input("Модел: ") 
 carCategory = input("Категоря: ") 
 
+# https://stackoverflow.com/questions/10136319/executing-javascript-from-python
+# https://github.com/jmcarp/robobrowser
+
+# audi a2       https://www.mobile.bg/pcgi/mobile.cgi?act=3&slink=i2gswq&f1=1
+# audi a2 sedan https://www.mobile.bg/pcgi/mobile.cgi?act=3&slink=i2gt1i&f1=1
+# audi a2 kupe  https://www.mobile.bg/pcgi/mobile.cgi?act=3&slink=i2gta3&f1=1 
+# differences are "swq -  t1i  - ta3"
+
+# bmw 525       https://www.mobile.bg/pcgi/mobile.cgi?act=3&slink=i2gtp3&f1=1 
+# bwm 525 sedan https://www.mobile.bg/pcgi/mobile.cgi?act=3&slink=i2gtsx&f1=1
+# bmw 525 kupe  https://www.mobile.bg/pcgi/mobile.cgi?act=3&slink=i2gtx8&f1=1 
+# differences are "gtp3  -  gtsx  -  gtx8"
 
 
 
-# ==== Section for only getting the link to the listings
+
+#       # ==== Section for only getting the link to the listings
 # Selenium - when creating the chrome browser, it will be invisible
 options = Options()
 options.headless = True
