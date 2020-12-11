@@ -1,7 +1,19 @@
 syntax = "proto3";
 
+message PriceRange
+{
+    repeated int32 _from = 1;
+    repeated int32 to = 2;
+}
+
 message Filters
 {
-    repeated string type = 1;
-    repeated string brand = 2;
+    map<int32, string> sorting_types = 1;
+    map<int32, string> categories = 2;
+    repeated string brands = 3;
+    repeated string models = 4;
+    repeated string types = 5;
+    map<int32, string> condition = 6;
+    PriceRange price = 7;
+   
 }

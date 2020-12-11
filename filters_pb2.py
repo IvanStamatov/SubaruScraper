@@ -19,30 +19,30 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='filters.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rfilters.proto\"&\n\x07\x46ilters\x12\x0c\n\x04type\x18\x01 \x03(\t\x12\r\n\x05\x62rand\x18\x02 \x03(\tb\x06proto3')
+  serialized_pb=_b('\n\rfilters.proto\"\'\n\nPriceRange\x12\r\n\x05_from\x18\x01 \x03(\x05\x12\n\n\x02to\x18\x02 \x03(\x05\"\xfb\x02\n\x07\x46ilters\x12\x31\n\rsorting_types\x18\x01 \x03(\x0b\x32\x1a.Filters.SortingTypesEntry\x12,\n\ncategories\x18\x02 \x03(\x0b\x32\x18.Filters.CategoriesEntry\x12\x0e\n\x06\x62rands\x18\x03 \x03(\t\x12\x0e\n\x06models\x18\x04 \x03(\t\x12\r\n\x05types\x18\x05 \x03(\t\x12*\n\tcondition\x18\x06 \x03(\x0b\x32\x17.Filters.ConditionEntry\x12\x1a\n\x05price\x18\x07 \x01(\x0b\x32\x0b.PriceRange\x1a\x33\n\x11SortingTypesEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x31\n\x0f\x43\x61tegoriesEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x30\n\x0e\x43onditionEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
 
-_FILTERS = _descriptor.Descriptor(
-  name='Filters',
-  full_name='Filters',
+_PRICERANGE = _descriptor.Descriptor(
+  name='PriceRange',
+  full_name='PriceRange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='Filters.type', index=0,
-      number=1, type=9, cpp_type=9, label=3,
+      name='_from', full_name='PriceRange._from', index=0,
+      number=1, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='brand', full_name='Filters.brand', index=1,
-      number=2, type=9, cpp_type=9, label=3,
+      name='to', full_name='PriceRange.to', index=1,
+      number=2, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -60,17 +60,246 @@ _FILTERS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=17,
-  serialized_end=55,
+  serialized_end=56,
 )
 
+
+_FILTERS_SORTINGTYPESENTRY = _descriptor.Descriptor(
+  name='SortingTypesEntry',
+  full_name='Filters.SortingTypesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='Filters.SortingTypesEntry.key', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='Filters.SortingTypesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=286,
+  serialized_end=337,
+)
+
+_FILTERS_CATEGORIESENTRY = _descriptor.Descriptor(
+  name='CategoriesEntry',
+  full_name='Filters.CategoriesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='Filters.CategoriesEntry.key', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='Filters.CategoriesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=339,
+  serialized_end=388,
+)
+
+_FILTERS_CONDITIONENTRY = _descriptor.Descriptor(
+  name='ConditionEntry',
+  full_name='Filters.ConditionEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='Filters.ConditionEntry.key', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='Filters.ConditionEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=390,
+  serialized_end=438,
+)
+
+_FILTERS = _descriptor.Descriptor(
+  name='Filters',
+  full_name='Filters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sorting_types', full_name='Filters.sorting_types', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='categories', full_name='Filters.categories', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='brands', full_name='Filters.brands', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='models', full_name='Filters.models', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='types', full_name='Filters.types', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='condition', full_name='Filters.condition', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='price', full_name='Filters.price', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_FILTERS_SORTINGTYPESENTRY, _FILTERS_CATEGORIESENTRY, _FILTERS_CONDITIONENTRY, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=59,
+  serialized_end=438,
+)
+
+_FILTERS_SORTINGTYPESENTRY.containing_type = _FILTERS
+_FILTERS_CATEGORIESENTRY.containing_type = _FILTERS
+_FILTERS_CONDITIONENTRY.containing_type = _FILTERS
+_FILTERS.fields_by_name['sorting_types'].message_type = _FILTERS_SORTINGTYPESENTRY
+_FILTERS.fields_by_name['categories'].message_type = _FILTERS_CATEGORIESENTRY
+_FILTERS.fields_by_name['condition'].message_type = _FILTERS_CONDITIONENTRY
+_FILTERS.fields_by_name['price'].message_type = _PRICERANGE
+DESCRIPTOR.message_types_by_name['PriceRange'] = _PRICERANGE
 DESCRIPTOR.message_types_by_name['Filters'] = _FILTERS
 
+PriceRange = _reflection.GeneratedProtocolMessageType('PriceRange', (_message.Message,), dict(
+  DESCRIPTOR = _PRICERANGE,
+  __module__ = 'filters_pb2'
+  # @@protoc_insertion_point(class_scope:PriceRange)
+  ))
+_sym_db.RegisterMessage(PriceRange)
+
 Filters = _reflection.GeneratedProtocolMessageType('Filters', (_message.Message,), dict(
+
+  SortingTypesEntry = _reflection.GeneratedProtocolMessageType('SortingTypesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _FILTERS_SORTINGTYPESENTRY,
+    __module__ = 'filters_pb2'
+    # @@protoc_insertion_point(class_scope:Filters.SortingTypesEntry)
+    ))
+  ,
+
+  CategoriesEntry = _reflection.GeneratedProtocolMessageType('CategoriesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _FILTERS_CATEGORIESENTRY,
+    __module__ = 'filters_pb2'
+    # @@protoc_insertion_point(class_scope:Filters.CategoriesEntry)
+    ))
+  ,
+
+  ConditionEntry = _reflection.GeneratedProtocolMessageType('ConditionEntry', (_message.Message,), dict(
+    DESCRIPTOR = _FILTERS_CONDITIONENTRY,
+    __module__ = 'filters_pb2'
+    # @@protoc_insertion_point(class_scope:Filters.ConditionEntry)
+    ))
+  ,
   DESCRIPTOR = _FILTERS,
   __module__ = 'filters_pb2'
   # @@protoc_insertion_point(class_scope:Filters)
   ))
 _sym_db.RegisterMessage(Filters)
+_sym_db.RegisterMessage(Filters.SortingTypesEntry)
+_sym_db.RegisterMessage(Filters.CategoriesEntry)
+_sym_db.RegisterMessage(Filters.ConditionEntry)
 
 
+_FILTERS_SORTINGTYPESENTRY.has_options = True
+_FILTERS_SORTINGTYPESENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_FILTERS_CATEGORIESENTRY.has_options = True
+_FILTERS_CATEGORIESENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_FILTERS_CONDITIONENTRY.has_options = True
+_FILTERS_CONDITIONENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 # @@protoc_insertion_point(module_scope)
